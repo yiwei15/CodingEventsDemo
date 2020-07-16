@@ -31,15 +31,35 @@ else
             <th>
                 Contact Email
             </th>
+            <th>
+                Location
+            </th>
+            <th>
+                Number of Attendees
+            </th>
+            <th>
+                Registration Required
+            </th>
         </tr>
         @foreach (var evt in Model)
         {
-            <tr>
-                <td>@evt.Id</td>
-                <td>@evt.Name</td>
-                <td>@evt.Description</td>
-                <td>@evt.ContactEmail</td>
-            </tr>
+    <tr>
+        <td>@evt.Id</td>
+        <td>@evt.Name</td>
+        <td>@evt.Description</td>
+        <td>@evt.ContactEmail</td>
+        <td>@evt.Location</td>
+        <td>@evt.NumOfAttendee</td>
+
+        @if (evt.RequireRegistration)
+        {
+            <td>Yes</td>
+        }else
+        {
+            <td>No</td>
+        }
+
+    </tr>
         }
     </table>
 }
