@@ -21,6 +21,8 @@ namespace coding_events_practice.Controllers
             context = dbContext;
         }
 
+
+
         // GET: /<controller>/
         public IActionResult Index()
         {
