@@ -6,6 +6,8 @@ namespace CodingEventsDemo.Data
 {
     public class EventDbContext : DbContext
     {
+        internal object EventCategory;
+
         public DbSet<Event> Events { get; set; }
 
         public DbSet<EventCategory> Categories { get; set; }
